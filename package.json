@@ -1,0 +1,16 @@
+{
+  "name": "mocha-browser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "api": "json-server --watch db.json"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "fake-fetch": "^2.1.0",
+    "json-server": "^0.14.2",
+    "mocha": "^3.5.0",
+    "sinon": "^7.3.2"
+  }
+}
