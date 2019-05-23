@@ -9,3 +9,14 @@ describe('simpleCallback', () => {
 
 })
 
+describe('anotherPromise', () => {
+
+})
+
+describe('anotherCallback', () => {
+
+})
+
+describe('lastPromise', () => {
+
+})
