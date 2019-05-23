@@ -68,7 +68,7 @@ describe('api', function () {
             expect(arrOfObjs[0]).to.include.keys('url')
         })
 
-        it('should reject when not given a url argument', () => { // refactor to should reject when fetch is not able to receive a response from the api with multiple test cases
+        it('should reject when not given a url argument', () => {
             return api.getImages().catch(e => {
                 expect(e).to.equal("No url given.")
             })
@@ -113,12 +113,6 @@ describe('api', function () {
     })
 
 })
-
-// describe('util', () => {
-//     describe('#isObject', () => {
-
-//     })
-// })
 
 describe('domHelpers', () => {
 
@@ -188,6 +182,8 @@ describe('domHelpers', () => {
 
             expect(dom.addImageToDom.firstCall.args[0]).to.equal(wellFormedArray[0].url)
             expect(dom.addImageToDom.secondCall.args[0]).to.equal(wellFormedArray[1].url)
+
+            dom.addImageToDom.restore()
 
         })
 

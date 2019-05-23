@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', function () {
+    api.getImages('http://localhost:3000/images')
+        .then(domHelpers.addImages)
+        .catch(dom.showImageError)
+})
+
+
 const util = {
     isObject: function (obj) {
         if (arguments.length !== 1) {
@@ -63,9 +70,3 @@ const dom = {
 
     }
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-    api.getImages('http://localhost:3000/images')
-        .then(domHelpers.addImages)
-        .catch(dom.showImageError)
-})
